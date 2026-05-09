@@ -1,1 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TikTok Callback</title>
+  </head>
+  <body>
+    <h1>TikTok callback hazır</h1>
+    <p>Code:</p>
+    <pre id="code"></pre>
 
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("code").textContent =
+        params.get("code") || "Code yok. TikTok login sonrası burada görünecek.";
+    </script>
+  </body>
+</html>
